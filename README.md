@@ -1,5 +1,5 @@
 # SimpleMQ
-This is an implmentation of NetMQ into a proto-type messaging system for a micro-service architecture. It uses the XPub/XSub Pattern from NetMQ to allow for a dynamic and scalable messaging system.
+This is an implementation of NetMQ into a proto-type messaging system for a micro-service architecture. It uses the XPub/XSub Pattern from NetMQ to allow for a dynamic and scalable messaging system.
 
 It is comprised of 4 pieces:<br/>
    1) Intermediary 
