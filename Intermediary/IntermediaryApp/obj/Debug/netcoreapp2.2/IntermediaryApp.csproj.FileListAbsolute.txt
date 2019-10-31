@@ -1,0 +1,26 @@
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\bin\Debug\netcoreapp2.2\nlog.config
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.deps.json
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.runtimeconfig.json
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.runtimeconfig.dev.json
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.dll
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.pdb
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.csprojAssemblyReference.cache
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.csproj.CoreCompileInputs.cache
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.AssemblyInfoInputs.cache
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.AssemblyInfo.cs
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.dll
+C:\Users\abraaw\source\repos\NetMQ\Intermediary\IntermediaryApp\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.pdb
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\bin\Debug\netcoreapp2.2\nlog.config
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.deps.json
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.runtimeconfig.json
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.runtimeconfig.dev.json
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.dll
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\bin\Debug\netcoreapp2.2\IntermediaryApp.pdb
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.csprojAssemblyReference.cache
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.csproj.CoreCompileInputs.cache
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.AssemblyInfoInputs.cache
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.AssemblyInfo.cs
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.dll
+C:\Users\abraaw\source\repos\NetMQ\New folder\Intermediary\IntermediaryApp\obj\Debug\netcoreapp2.2\IntermediaryApp.pdb

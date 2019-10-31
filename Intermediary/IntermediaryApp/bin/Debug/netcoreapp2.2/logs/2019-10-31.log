@@ -1,0 +1,6 @@
+2019/10/31 08:27:53.707|INFO|Starting Pub/Sub Intermediary ... |IntermediaryApp.Intermediary|
+2019/10/31 08:27:53.777|INFO|Awaiting Connections ... |IntermediaryApp.Intermediary|
+2019/10/31 08:28:03.203|WARN|Pub/Sub Intermediary Processing is Shutting Down. |IntermediaryApp.Program|
+2019/10/31 08:29:04.511|INFO|Starting Pub/Sub Intermediary ... |IntermediaryApp.Intermediary|
+2019/10/31 08:29:04.565|INFO|Awaiting Connections ... |IntermediaryApp.Intermediary|
+2019/10/31 08:36:02.145|WARN|Pub/Sub Intermediary Processing is Shutting Down. |IntermediaryApp.Program|
