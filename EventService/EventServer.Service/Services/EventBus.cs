@@ -35,9 +35,9 @@ namespace EventServer.Server.Services
         {
             if (!connected)
             {
-                socket = new SubscriberSocket(_configuration["NetMQ:Connection"]);
+                socket = new SubscriberSocket(_configuration["NetMQ:SubscribeConnection"]);
                 socket.Options.ReceiveHighWatermark = 1000;
-                socket.Subscribe(_configuration["NetMQ:Topic"]);
+                socket.Subscribe(_configuration["EventBus:Topic"]);
                 socket.ReceiveReady += ReceieveMessage;
                 poller = new NetMQPoller { socket };
                 poller.Run();
@@ -51,8 +51,8 @@ namespace EventServer.Server.Services
         {
             if (connected)
             {
-                socket.Unsubscribe(_configuration["NetMQ:Topic"]);
-                socket.Disconnect(_configuration["NetMQ:Connection"]);
+                socket.Unsubscribe(_configuration["EventBus:Topic"]);
+                socket.Disconnect(_configuration["NetMq:SubscribeConnection"]);
 
                 poller.Stop();
 

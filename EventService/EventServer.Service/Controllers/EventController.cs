@@ -37,6 +37,22 @@ namespace EventServer.Server.Controllers
             }
         }
 
+        [HttpGet("{topic}")]
+        public IActionResult GetEventsByTopic(string topic)
+        {
+            try
+            {
+                var data = _service.GetEventsByTopic(topic);
+
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "");
+                return new StatusCodeResult(500);
+            }
+        }
+
         [HttpGet("{eventId}")]
         public IActionResult GetEventDetail(Guid eventId)
         {

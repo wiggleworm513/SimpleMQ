@@ -36,6 +36,18 @@ namespace EventServer.Server.Services
             return data;
         }
 
+
+        public IQueryable GetEventsByTopic(string topic)
+        {
+            IQueryable data = null;
+
+            data = _context.Event
+                .Where(e => e.EventTopic == topic
+                         && e.EventStatus == 0);
+
+            return data;
+        }
+
         public IQueryable GetProcessEventDetail(Guid processEventId)
         {
             IQueryable data = null;

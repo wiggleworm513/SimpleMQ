@@ -9,6 +9,7 @@ namespace EventServer.Server.Interfaces
     public interface IEventService
     {
         IQueryable GetEvents();
+        IQueryable GetEventsByTopic(string topic);
         IQueryable GetEventDetail(Guid eventId);
         IQueryable GetProcessEvents();
         IQueryable GetProcessEventDetail(Guid processEventId);
