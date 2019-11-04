@@ -1,0 +1,42 @@
+﻿@model List<ChartTimeData>
+
+<div class="col border" style="max-height: 400px;max-width:400px;">
+    <canvas id="receivedDay" width="200" height="200" style="max-height:inherit;max-width:inherit;"></canvas>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        let receivedDay = $('#receivedDay');
+
+        new Chart(receivedDay, {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'Received Per Hour',
+                    data: @(JsonConvert.SerializeObject(Model)),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }],
+                    xAxes: [{
+                        type: 'time',
+                        time: {
+                            unit: 'hour'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Received Today:'
+                }
+            }
+        });
+
+    });
+</script>

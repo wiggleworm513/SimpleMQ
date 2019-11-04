@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col border">
+        @await Html.PartialAsync("_CurrentStatusPartial", Web.Util.EventHelper.GetCurrentStatus())
+    </div>
+    <div class="col border">
+
+    </div>
+    <div class="w-100"></div>
+    @*@await  Html.PartialAsync("_DailyReceivedChartPartial", Web.Util.ChartHelper.GetDailyReceived(DateTime.Now))*@
+    <div class="col border" style="max-height: 400px;max-width:400px;">
+        <canvas id="receivedYear" width="200" height="200" style="max-height:inherit;max-width:inherit;"></canvas>
+    </div>
+    <div class="col border" style="max-height: 400px;max-width:400px;">
+        <canvas id="receivedMonth" width="200" height="200" style="max-height:inherit;max-width:inherit;"></canvas>
+    </div>
+    <div class="col border" style="max-height: 400px;max-width:400px;">
+        <canvas id="receivedYear" width="200" height="200" style="max-height:inherit;max-width:inherit;"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {        
+        let receivedMonth = $('#receivedMonth');
+        
+        new Chart(receivedMonth, {
+            type: 'bar',
+            data: {
+                labels: ['1/1', '1/2', '1/3', '1/4', '1/5', '1/6', '1/7'],
+                datasets: [{
+                    label: 'Received Per Date',
+                    data: [100, 24, 34, 56, 73, 244, 93],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.5)',
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(255, 206, 86, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgba(153, 102, 255, 0.5)',
+                        'rgba(255, 159, 64, 0.5)',
+                        'rgba(0, 200, 0, 0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(0, 200, 0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Received (Last 7 Days):'
+                }
+            }
+        });
+       
+    });   
+</script>

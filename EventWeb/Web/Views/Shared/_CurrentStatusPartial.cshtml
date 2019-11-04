@@ -1,0 +1,16 @@
+﻿@model QueueStatus
+
+
+<div class="row">
+    <div class="col text-lg-center font-weight-bold">Current Queue Status</div>
+</div>
+<div class="row mt-5">
+    <div class="col">Date:</div>
+    <div class="col">@Model.StatusDate</div>
+    <div class="w-100"></div>
+    <div class="col">Status:</div>
+    <div class="col">@Model.StatusIndicator</div>
+    <div class="w-100"></div>
+    <div class="col">Message:</div>
+    <div class="col">@Model.StatusMessage</div>
+</div>
