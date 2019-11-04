@@ -17,13 +17,10 @@ namespace EventServer.Data.Entities
 
         public virtual DbSet<Event> Event { get; set; }
         public virtual DbSet<ProcessEvent> ProcessEvent { get; set; }
+        public virtual DbSet<QueueStatus> QueueStatus { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=wc-db1;Database=EventQueue;Trusted_Connection=True;");
-            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -66,6 +63,21 @@ namespace EventServer.Data.Entities
                     .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.ProcessMessage)
+                    .IsRequired()
+                    .HasDefaultValueSql("('')");
+            });
+
+            modelBuilder.Entity<QueueStatus>(entity =>
+            {
+                entity.HasKey(e => e.StatusId);
+
+                entity.Property(e => e.StatusId).HasDefaultValueSql("(newid())");
+
+                entity.Property(e => e.StatusDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.StatusMessage)
                     .IsRequired()
                     .HasDefaultValueSql("('')");
             });

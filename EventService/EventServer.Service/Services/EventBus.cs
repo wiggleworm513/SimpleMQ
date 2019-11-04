@@ -1,5 +1,5 @@
 ﻿using EventServer.Data.Entities;
-using EventServer.Server.Interfaces;
+using EventServer.Service.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -13,7 +13,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace EventServer.Server.Services
+namespace EventServer.Service.Services
 {
     public class EventBus : IEventBus, IHostedService
     {
@@ -40,7 +40,7 @@ namespace EventServer.Server.Services
                 socket.Subscribe(_configuration["EventBus:Topic"]);
                 socket.ReceiveReady += ReceieveMessage;
                 poller = new NetMQPoller { socket };
-                poller.Run();
+                poller.RunAsync();
                 connected = true;
             }
 

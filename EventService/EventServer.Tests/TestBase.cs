@@ -1,12 +1,12 @@
 ﻿using EventServer.Data.Entities;
-using EventServer.Server.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Moq;
-using EventServer.Server.Services;
+using EventServer.Service.Interfaces;
+using EventServer.Service.Services;
 
 namespace EventServer.Tests
 {

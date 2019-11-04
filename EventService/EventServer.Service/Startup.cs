@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EventServer.Data.Entities;
-using EventServer.Server.Interfaces;
-using EventServer.Server.Services;
+using EventServer.Service.Interfaces;
+using EventServer.Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +32,7 @@ namespace EventServer.Server
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddHostedService<EventBus>();
+            services.AddHostedService<MessageQueue>();
             services.AddScoped<IEventService, EventService>();
 
             services.AddDbContext<EventQueueContext>(options =>

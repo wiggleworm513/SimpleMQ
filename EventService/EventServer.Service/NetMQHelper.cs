@@ -9,7 +9,7 @@ namespace EventServer.Service
 {
     public static class NetMQHelper
     {
-        public static NetMQMessage CreateMessage(string[] messageData)
+        private static NetMQMessage CreateMessage(string[] messageData)
         {
             NetMQMessage message = new NetMQMessage();
 
@@ -19,6 +19,16 @@ namespace EventServer.Service
             }
 
             return message;
+        }
+
+        public static NetMQMessage CreateMessage(string topic, string sender, string payload)
+        {
+            return CreateMessage(new string[] { topic, DateTime.Now.ToString(), sender, payload });
+        }
+
+        public static NetMQMessage CreateRepubMessage(string topic, string sender, string payload)
+        {
+            return CreateMessage(new string[] { $"Republish-{topic}", DateTime.Now.ToString(), sender, payload });
         }
 
         public static void SendMessage(string connection, NetMQMessage message)

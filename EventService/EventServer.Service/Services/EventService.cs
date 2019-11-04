@@ -1,12 +1,12 @@
 ﻿using EventServer.Data.Entities;
-using EventServer.Server.Interfaces;
+using EventServer.Service.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EventServer.Server.Services
+namespace EventServer.Service.Services
 {
     public class EventService : IEventService
     {
@@ -16,6 +16,8 @@ namespace EventServer.Server.Services
         {
             _context = context;            
         }
+
+        #region Query Methods
 
         public IQueryable GetEventDetail(Guid eventId)
         {
@@ -36,6 +38,15 @@ namespace EventServer.Server.Services
             return data;
         }
 
+        public IQueryable GetEventsByDate(DateTime date)
+        {
+            IQueryable data = null;
+
+            data = _context.Event
+                .Where(e => e.EventDate.ToShortDateString() == date.ToShortDateString());
+
+            return data;
+        }
 
         public IQueryable GetEventsByTopic(string topic)
         {
@@ -66,6 +77,27 @@ namespace EventServer.Server.Services
 
             return data;
         }
+
+        public IQueryable GetLastQueueStatus()
+        {
+            IQueryable data = null;
+
+            data = _context.QueueStatus.OrderByDescending(q => q.StatusDate).Take(1);
+
+            return data;
+        }
+        public IQueryable GetAllQueueStatus(DateTime date)
+        {
+            IQueryable data = null;
+
+            data = _context.QueueStatus.Where(q => q.StatusDate.ToShortDateString() == date.ToShortDateString());
+
+            return data;
+        }
+
+        #endregion
+
+        #region Create, Update, Delete Methods
 
         public void UpdateEvent(Event eventDetail)
         {
@@ -98,5 +130,14 @@ namespace EventServer.Server.Services
 
             _context.SaveChanges();
         }
+
+        public void AddQueueStatus(QueueStatus status)
+        {
+            _context.QueueStatus.Add(status);
+
+            _context.SaveChanges();
+        }
+
+        #endregion
     }
 }

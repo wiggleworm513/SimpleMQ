@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EventServer.Server.Interfaces;
+using EventServer.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -27,6 +27,22 @@ namespace EventServer.Server.Controllers
             try
             {
                 var data = _service.GetEvents();
+
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "");
+                return new StatusCodeResult(500);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult GetEventsByDate(DateTime date)
+        {
+            try
+            {
+                var data = _service.GetEventsByDate(date);
 
                 return Ok(data);
             }
@@ -95,6 +111,37 @@ namespace EventServer.Server.Controllers
                 return Ok(data);
             }
             catch (Exception ex)
+            {
+                _logger.LogError(ex, "");
+                return new StatusCodeResult(500);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult GetCurrenQueueStatus()
+        {
+            try
+            {
+                var data = _service.GetLastQueueStatus();
+
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "");
+                return new StatusCodeResult(500);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult GetAllQueueStatus(DateTime date)
+        {
+            try
+            {
+                var data = _service.GetAllQueueStatus(date);
+
+                return Ok(data);
+            }catch(Exception ex)
             {
                 _logger.LogError(ex, "");
                 return new StatusCodeResult(500);

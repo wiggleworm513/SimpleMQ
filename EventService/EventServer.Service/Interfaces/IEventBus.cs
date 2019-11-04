@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EventServer.Server.Interfaces
+namespace EventServer.Service.Interfaces
 {
     public interface IEventBus
     {
